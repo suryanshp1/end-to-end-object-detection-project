@@ -1,10 +1,4 @@
-from signLanguage.logger import logging
-from signLanguage.exception import SignLangException
-import sys
+from signLanguage.pipeline.training_pipeline import TrainingPipeline
 
-# logging.info("Logger initialized")
-
-try:
-    x=10/0
-except Exception as e:
-    raise SignLangException(e, sys) from e
+obj = TrainingPipeline()
+obj.run_pipeline()
